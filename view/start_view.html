@@ -1,0 +1,55 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+
+<html>
+ <head>
+     <style  type='text/css' >
+        #bd_signup{
+            background-color: #999;
+            margin-top: 50px;
+            width:  100%;
+            height: 900%;
+               
+        }
+        #bd_login
+        {
+          margin-top: 50px;
+          margin-right: -70px;
+        }
+        body
+        {
+        background-image: url('<?php echo base_url()?>images/images6.jpg');    
+        }
+     </style>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+       <div id="bd_login">
+          <form method='Post' action ='http://localhost/ci/index.php/tracking/user_login'>
+            <table align ='center' style="border: solid #ccc thin; width: 250px; height: 350px;margin:0px auto;">
+                <tr><td align ='left'>
+                <ul><?php  echo validation_errors('<li color =red>','</li>'); ?>
+               </ul>
+               </td></tr>
+            <tr><td align='right'>
+                <label id="email" >Email:</label></td>
+                <td><input  type='text'   name ='email' value='<?php echo  set_value("email");?>' >
+                </td></tr>
+           <tr><td align='right'>
+                <label id="password" >Password:</label></td>
+                <td><input  type='text'   name ='password' value=''></td>
+           </tr>
+         <tr><td  align="center" colspan="2"> 
+                 <input type='Submit'  id='login' name ='signUp/login' value="Login"  style=" width: 70px;">
+                </td></tr>
+        <tr><td  align="center" colspan="2"><input type='Submit'  id ="signup" name ='signUp/login' value="SignUp" style=" width: 70px;">
+                </td></tr>
+            </table>
+        </form>           
+        </div>
+    </body>
+</html>

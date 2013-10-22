@@ -1,0 +1,16 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head></head>
+    <body> <h1>Timo</h1> 
+        <h2> Dear <a href="mailto:<?php $invitee; ?>"><?php echo $this->session->userdata('invitee')?></a></h2>
+          <a href = "http://google.com/">Google</a>
+          <p><?php  echo $this->session->userdata('name')?> has invited you to join "<?php echo "hello"?>" at Timo.com.</p>
+          <P>To confirm your joining visit <a href="<?php echo $url;?>"></a> 
+          <P>Best Wishes</P>
+          <P>Timo Team</P>
+    </body>
+</html>

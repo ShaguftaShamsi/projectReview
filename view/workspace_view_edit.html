@@ -1,0 +1,91 @@
+
+<html>
+       <head>
+        <style type='text/css'>
+           #name
+            {
+        float: right;
+         width:30px;
+         height: 50px;            
+            }
+            #des{
+              float: start;
+              clear:left;
+              background-color: blue;
+            }
+            #des_in{
+                background-color: white;
+            }
+          
+            #menu{
+               height: 50px;
+               width: 100%;
+               background-color:  #DFDDDD;
+            }  
+            #menu ul{
+                float: right;
+            }
+          #menu  ul li{
+            list-style-type: none;
+            display: inline;
+            padding:  0 10px;
+            }
+            #menu ul li a:hover{
+               color:#777;
+            }  
+           #menu ul li a{
+                height:35px;
+                color: #777;
+                width: auto;
+                text-decoration: none;}
+        </style>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+         <div id="menu">
+            <ul>
+                <li><a href ="">Home</a></li>
+                <li><a href = "<?php  echo site_url('report/show');?>">Report</a></li>
+                <li><a href="">Setting</a></li>
+                <li><a href="<?php  echo site_url('logout/user_logout');?>">Logout</a></li>
+            </ul>
+        </div>
+        <div style=" margin-top: 30px">
+        
+                <?php  echo  form_open('workspace/save');?>
+            <fieldset style="height: 200px ;width: 80%">
+                <legend></legend>
+                   <table width="100%">
+                <tr>
+                    <td style='border-bottom: 2px solid green; padding-bottom:5px;'>
+                <p><a style="text-decoration: none; margin-left: 5px; margin:4em 0;" href = "<?php  echo site_url('track/display_message');?>">Back to time tracking</a>
+                    <span  style="padding: 10px">
+                        <input type='submit'  name='save/invite' value='Save' ></span>
+                  </p>
+                </td>
+                </tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr >
+                    <td  style=" padding-top: 20px"><label id ="wp_name">Workspace name</label></td>
+                 </tr>
+                   <tr>
+                     <td style=" padding-top: 20px">
+                         <input type ="text" name ="add_new_wp" value='<?php  if(isset($worksp_name)) echo  $worksp_name;?>' id='add_new_wp' size="35" > 
+                     </td>
+                 </tr>
+                 <tr><td></td></tr>
+                <tr><td></td></tr>
+                   <tr>
+                       <td colspan="1" style='border-top: 2px solid green; padding-top:10px;'>
+                       <input type='submit' name='save/invite' value='Invite new member'>
+                       </td>
+                    
+                   </tr>
+                     </table>
+            </fieldset>
+         <?php form_close();?>
+          </div>
+    </body>
+</html>
+
